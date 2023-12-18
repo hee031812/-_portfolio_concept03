@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@600;700&family=Syncopate:wght@400;700&display=swap');
+@import url('https://webfontworld.github.io/cafe24/Cafe24Ohsquareair.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Readex+Pro:wght@600;700&display=swap');
+@import url('https://webfontworld.github.io/Cafe24Ohsquareair/Cafe24Ohsquareair.css');
+@import url('https://webfontworld.github.io/vitro/VitroPride.css');
+@import url('https://webfontworld.github.io/elice/EliceDigitalBaeum.css');
+@import url('https://webfontworld.github.io/sebang/SebangGothic.css');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+@font-face {
+    src: url("https://assets.codepen.io/2479807/gilroy-regular.ttf");
+    font-family: "Gilroy";
+}
+
+@font-face {
+    src: url("https://assets.codepen.io/2479807/gilroy-semibold.woff2");
+    font-family: "Gilroy Semi-Bold";
+}
+
+@font-face {
+    font-family: 'PPSupplyMono';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../font/PPSupplyMono-Regular.woff') format('woff2'),
+        url('../font/PPSupplyMono-Regular.woff2') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPSupplyMono';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../font/PPSupplyMono-Ultralight.woff2') format('woff2'),
+        url('../font/PPSupplyMono-Ultralight.woff2') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPSupplySans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../font/PPSupplySans-Regular.woff2') format('woff2'),
+        url('../font/PPSupplySans-Regular.woff2') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PPSupplySans';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../font/PPSupplySans-Ultralight.woff2') format('woff2'),
+        url('../font/PPSupplySans-Ultralight.woff2') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IropkeBatang';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.ttf') format("truetype");
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Montreal';
+    src: url('../../assets/font/Montreal\ Bold.otf') format('truetype');
+    src: url('../../assets/font/Montreal\ Light.otf') format('truetype');
+    src: url('../../assets/font/Montreal\ Medium.ttf') format('truetype');
+    src: url('../../assets/font/Montreal\ Regular.otf') format('truetype');
+    src: url('../../assets/font/Montreal\ Thin.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PPNeueMontreal';
+    src: url('../../assets/font/PPNeueMontreal-Bold.otf') format('truetype');
+    src: url('../../assets/font/PPNeueMontreal-Book.otf') format('truetype');
+    src: url('../../assets/font/PPNeueMontreal-Italic.otf') format('truetype');
+    src: url('../../assets/font/PPNeueMontreal-Medium.otf') format('truetype');
+    src: url('../../assets/font/PPNeueMontreal-SemiBolditalic.otf') format('truetype');
+    src: url('../../assets/font/PPNeueMontreal-Thin.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RightGrotesk';
+    src: url('../../assets/font/RightGrotesk-Medium.otf') format('truetype');
+    src: url('../../assets/font/RightGrotesk-NarrowLight.otf') format('truetype');
+    src: url('../../assets/font/RightGrotesk-SpatialBlack.otf') format('truetype');
+    src: url('../../assets/font/RightGrotesk-TallFine.otf') format('truetype');
+    src: url('../../assets/font/RightGrotesk-WideMedium.otf') format('truetype');
+}
+
+
+
+@font-face {
+    font-family: 'Cafe24Ohsquareair';
+    src: url('../../assets/font/MonumentExtended-Regular.otf') format('truetype');
+    src: url('../../assets/font/MonumentExtended-Ultrabold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'heart';
+    src: url('../font/Heart\ Warming\ Extra\ Font\ by\ Situjuh\ \(7NTypes\).otf') format('truetype');
+    src: url('../font/Heart\ Warming\ Font\ by\ Situjuh\ \(7NTypes\).otf') format('truetype');
+}
+
+
+
+.syn {
+    font-family: "Syncopate";
+}
+
+.squar {
+    font-family: "Cafe24Ohsquareair";
+}
+
+.Poppins {
+    font-family: "Poppins";
+}
+
+.VitroPride {
+    font-family: "VitroPride";
+}
+
+.elice {
+    font-family: 'EliceDigitalBaeum';
+}
+
+.sebang {
+    font-family: "SebangGothic";
+}
