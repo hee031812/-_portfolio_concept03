@@ -30,13 +30,13 @@
       </div>
       <div class="right">
         <div class="time"></div>
-        <div class="contry">
-        </div>
+        <div class="contry"></div>
+      </div>
     </header>
     <!-- //header -->
   </div>
   <div class="border">
-        <p></p>
+    <p></p>
   </div>
   </div>
   <div id="section1">
@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="about_right ">
-        <h4 class="highlight-text">{ 삶의 모토 : </h4>
+        <h4 class="highlight-text text">{ 삶의 모토 } </h4>
         <p>
           프론트 앤드 개발자를 꿈꾸는 김희진입니다.<br>
           "한번의 경험이 없으면 한번의 지혜가 자라지 않는다."<br>이 문장은 제 삶의 모토입니다. 한번의 경험이 없으면
@@ -76,20 +76,20 @@
           지혜를 얻는 다는 마음가짐으로 늘 겸손한 자세로 배우고 제것으로 만들고자 노력했습니다. <br>
           다시한번 프론트앤드라는 꿈을 꾸며 배움을 익힐때도 저의 이러한 삶의 모토로 늘 어려움을 극복해 나갈것입니다.<br>
           신입으로써 항상 늘 내것이 된다라는 마음가짐으로 감사하게 삶과 일을 대하고 싶습니다!<br>
-          <span>}</span>
+
         </p>
       </div>
-      
+
     </div>
     <div class="about2">
-      <h4 class="highlight-text">{ 새로운 꿈을 꾸는 계기 : </h4>
+      <h4 class="highlight-text">{ 새로운 꿈을 꾸는 계기 } </h4>
       <p>
         늘 진취적인 마음가짐으로 얻은 다양한 경험들이 모여 새로운 꿈인 프론트엔드 개발자를 향한 열망이
         되었습니다.<br>학창시절의 전공과 여성의류 온라인 사업에서의 UI/UX 경험을 통해 웹 개발에 흥미를 느꼈고,<br>
         끊임없는 학습을 추구하는 저의 가치관과 프론트엔드 개발의 가치가 조화를 이루어 꿈을 키우게 되었습니다.<br>
         프론트엔드 개발은 어렵고 도전적인 과정이지만, 그 일의 가치와 재미에 큰 만족을 느낍니다. <br>새로운 꿈을
         찾아나가는 여정을 어렵게 찾은 만큼 더욱 열정적으로 힘차게 나아가고 싶습니다.<br>
-        <span>}</span>
+
       </p>
     </div>
   </div>
@@ -107,7 +107,6 @@
                 정보를 공유하는<br />
                 플랫폼입니다
               </div>
-
             </div>
             <div class="write_right">
               <div class="right_box1">React</div>
@@ -270,10 +269,10 @@
     </div>
   </div>
 
-    <!-- section04 -->
+  <!-- section04 -->
   <div id="section05">
     <div class="container05">
-      <div class="stack">
+      <div class="stack ">
         <p>Which stack <br />do you use?</p>
       </div>
       <div class="stackList01">
@@ -358,33 +357,48 @@
         </div>
       </div>
     </div>
-    <div id="section06">
-      <div class="container06">
-        <div class="sec06_left">
-          <h5>SAY HI!</h5>
-        </div>
-        <div class="sec06_right">
-          <div class="contactWrap">
-            <h6>Contact me</h6>
-            <p>Tell us about your project.<br>
-              Let’s collaborate and make great stuff.</p>
-            <div class="linkWrap">
-              <div class="icon1"><div class="img1"></div>Write us</div>
-              <div class="icon2"><div class="img2"></div>+82 010 3315 9099</div>
+
+    <!-- //section05 -->
+
+  </div>
+  <div id="section06">
+    <div class="container06">
+      <div class="sec06_left">
+        <h5>SAY HI!</h5>
+      </div>
+      <div class="sec06_right">
+        <div class="contactWrap">
+          <h6>Contact me</h6>
+          <p>Tell us about your project.<br>
+            Let’s collaborate and make great stuff.</p>
+          <div class="linkWrap">
+            <div class="icon1">
+              <div class="img1"></div>Write us
+            </div>
+            <div class="icon2">
+              <div class="img2"></div>+82 010 3315 9099
             </div>
           </div>
-          <div class="sec06_line"></div>
-          <div class="commentWrap">
-            <h5>Comment</h5>
-            <p>Please write down what you want to say.</p>
-            <fieldset>
-              <div class="name">name: <input type="text"></div>
-              <div class="write">write: <input type="text"></div>
-            </fieldset>
-          </div>
+        </div>
+        <div class="sec06_line"></div>
+        <div class="commentWrap">
+          <h5>Comment</h5>
+          <p>Please write down what you want to say.</p>
+          <fieldset>
+            <div class="name">Name <input type="text"></div>
+            <div class="write">Reply <input type="text"></div>
+            <button>Send</button>
+          </fieldset>
         </div>
       </div>
     </div>
+    <div class="infoWrap">
+      <div class="git">git</div>
+      <div class="tstory">tstory</div>
+      <div class="instagram">instagram</div>
+    </div>
+    <div class="line06"></div>
+  </div>
 </body>
 <!-- GSAP CDN 추가 -->
 
@@ -402,7 +416,7 @@
     ease: "none",
     scrollTrigger: {
       trigger: "#section03",
-      start: "top 30px",
+      start: "top 40px",
       end: "+=2500",
       pin: true,
       scrub: 1,
@@ -424,6 +438,8 @@
       gsap.to("ul li a", { color: "#fff", duration: 1.4 });
       gsap.to(".time", { color: "#fff", duration: 1.4 });
       gsap.to(".contry", { color: "#fff", duration: 1.4 });
+      gsap.to(".contry", { color: "#fff", duration: 1.4 });
+      gsap.to(".header", { color: "#fff", duration: 1.4 });
     },
     onEnterBack: () => {
       gsap.to("body", { backgroundColor: "#1A1A1A", duration: 0.8 });
@@ -431,14 +447,16 @@
       gsap.to("ul li a", { color: "#FF3B00", duration: 1.4 });
       gsap.to(".time", { color: "#FF3B00", duration: 1.4 });
       gsap.to(".contry", { color: "#FF3B00", duration: 1.4 });
+      gsap.to(".header", { color: "#FF3B00", duration: 1.4 });
     },
     onLeave: ({ progress }) => {
       if (progress > 0.5) {
         gsap.to("body", { backgroundColor: "#1A1A1A", duration: 0.8 });
-        gsap.to("h1", { color: "#FF3B00", duration: 1.4 });
-        gsap.to("ul li a", { color: "#FF3B00", duration: 1.4 });
-        gsap.to(".time", { color: "#FF3B00", duration: 1.4 });
-        gsap.to(".contry", { color: "#FF3B00", duration: 1.4 });
+        gsap.to("h1", { color: "#fff", duration: 1.4 });
+        gsap.to("ul li a", { color: "#fff", duration: 1.4 });
+        gsap.to(".time", { color: "#fff", duration: 1.4 });
+        gsap.to(".contry", { color: "#fff", duration: 1.4 });
+        gsap.to(".header", { color: "#fff", duration: 1.4 });
       }
     },
     onLeaveBack: ({ progress }) => {
@@ -448,11 +466,13 @@
         gsap.to("ul li a", { color: "#FF3B00", duration: 1.4 });
         gsap.to(".time", { color: "#FF3B00", duration: 1.4 });
         gsap.to(".contry", { color: "#FF3B00", duration: 1.4 });
+        gsap.to("#header", { color: "#FF3B00", duration: 1.4 });
       } else {
         gsap.to("h1", { color: "#FF3B00", duration: 1.4 });
         gsap.to("ul li a", { color: "#FF3B00", duration: 1.4 });
         gsap.to(".time", { color: "#FF3B00", duration: 1.4 });
         gsap.to(".contry", { color: "#FF3B00", duration: 1.4 });
+        gsap.to("#header", { color: "#FF3B00", duration: 1.4 });
       }
     },
     onLeaveBack: ({ progress }) => {
@@ -461,13 +481,13 @@
         gsap.to(".h1", { color: "#FF3B00", duration: 1.4 });
         gsap.to("ul li a", { color: "#FF3B00", duration: 1.4 });
         gsap.to(".time", { color: "#FF3B00", duration: 1.4 });
-        gsap.to(".contry", { color: "#FF3B00", duration: 1.4 });
+        gsap.to("#header", { color: "#FF3B00", duration: 1.4 });
       } else {
         gsap.to("body", { backgroundColor: "#F4F0E6", duration: 1.4 });
         gsap.to(".h1", { color: "#FF3B00", duration: 1.4 });
         gsap.to("ul li a", { color: "#FF3B00", duration: 1.4 });
         gsap.to(".time", { color: "#FF3B00", duration: 1.4 });
-        gsap.to(".contry", { color: "#FF3B00", duration: 1.4 });
+        gsap.to("#header", { color: "#FF3B00", duration: 1.4 });
       }
     },
   });
@@ -497,7 +517,7 @@
     let chars = SplitClient.chars;
   })
 
-  
+
   // 이미지 2
   gsap.registerPlugin(ScrollTrigger);
 
@@ -626,15 +646,27 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("#section06", {
-  backgroundColor: "darkgray",
-  scrollTrigger: {
-    trigger: "#section06", 
-    start: "top 50%",
-    end: "bottom 10%", 
-    scrub: true 
-  }
-});
+  gsap.to("#section06", {
+    backgroundColor: "darkgray",
+    scrollTrigger: {
+      trigger: "#section06",
+      start: "top 50%",
+      end: "bottom 10%",
+      scrub: true
+    }
+  });
+
+
+
+
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('.left ul');
+
+  hamburger.addEventListener('click', function () {
+    menu.classList.toggle('open');
+  });
+
+
 
 
 
