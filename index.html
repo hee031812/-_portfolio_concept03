@@ -59,12 +59,66 @@
   <!-- //section01 -->
 
   <div id="section2">
-    <div class="about1">
-      <div class="about_left">
-        <div class="imgWrap2">
-          <div class="img"></div>
-        </div>
+
+    <div class="Container">
+
+      <!-- last card -->
+      <div class="Picture">
+        <img class="Picture-img"
+          src="https://media.licdn.com/dms/image/C4D03AQHjPuY9oi3Www/profile-displayphoto-shrink_800_800/0/1579768452204?e=2147483647&v=beta&t=4ZgTgOkSEu2eKRoLWEVtgL8s2zYu80YMxI_0018U9Dk"
+          alt="" />
+        <div class="Picture-note"><span>@Heejin's - <a class="git" href="https://github.com/hee031812/hee031812.git"
+              target="_top"><img src="./src/assets/img/git.png" alt="photo" /></a><a class="mail"
+              href="https://twitter.com/DeyJordan" target="_top"><img src="./src/assets/img/@.png"
+                alt="mail" /></a></span></div>
       </div>
+      <!-- other cards -->
+
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/733/400" alt="" />
+        <div class="Picture-note"><span>Over the clouds</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/613/400" alt="" />
+        <div class="Picture-note"><span>Golden Gate Bridge - San Francisco</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/40/400" alt="" />
+        <div class="Picture-note"><span>Cat nose</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/465/400" alt="" />
+        <div class="Picture-note"><span>Mountain</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/1029/400" alt="" />
+        <div class="Picture-note"><span>Central Park - New York</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/923/400" alt="" />
+        <div class="Picture-note"><span>Autumn</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/425/400" alt="" />
+        <div class="Picture-note"><span>Coffee</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/200/400" alt="" />
+        <div class="Picture-note"><span>An Irish cow enjoying the wind on the beach</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/244/400" alt="" />
+        <div class="Picture-note"><span>pelicans at the water's edge</span></div>
+      </div>
+      <div class="Picture">
+        <img class="Picture-img" src="https://picsum.photos/id/15/400" alt="" />
+        <div class="Picture-note"><span>Waterfall</span></div>
+      </div>
+    </div>
+
+
+
+    <div class="about1">
       <div class="about_right ">
         <h4 class="highlight-text text">{ 삶의 모토 } </h4>
         <p>
@@ -76,21 +130,8 @@
           지혜를 얻는 다는 마음가짐으로 늘 겸손한 자세로 배우고 제것으로 만들고자 노력했습니다. <br>
           다시한번 프론트앤드라는 꿈을 꾸며 배움을 익힐때도 저의 이러한 삶의 모토로 늘 어려움을 극복해 나갈것입니다.<br>
           신입으로써 항상 늘 내것이 된다라는 마음가짐으로 감사하게 삶과 일을 대하고 싶습니다!<br>
-
         </p>
       </div>
-
-    </div>
-    <div class="about2">
-      <h4 class="highlight-text">{ 새로운 꿈을 꾸는 계기 } </h4>
-      <p>
-        늘 진취적인 마음가짐으로 얻은 다양한 경험들이 모여 새로운 꿈인 프론트엔드 개발자를 향한 열망이
-        되었습니다.<br>학창시절의 전공과 여성의류 온라인 사업에서의 UI/UX 경험을 통해 웹 개발에 흥미를 느꼈고,<br>
-        끊임없는 학습을 추구하는 저의 가치관과 프론트엔드 개발의 가치가 조화를 이루어 꿈을 키우게 되었습니다.<br>
-        프론트엔드 개발은 어렵고 도전적인 과정이지만, 그 일의 가치와 재미에 큰 만족을 느낍니다. <br>새로운 꿈을
-        찾아나가는 여정을 어렵게 찾은 만큼 더욱 열정적으로 힘차게 나아가고 싶습니다.<br>
-
-      </p>
     </div>
   </div>
   <!-- //section02 -->
@@ -659,15 +700,58 @@
 
 
 
-  const hamburger = document.querySelector('.hamburger');
-  const menu = document.querySelector('.left ul');
+  const pictures = document.querySelectorAll('.Picture');
+  var previousTouch = undefined;
 
-  hamburger.addEventListener('click', function () {
-    menu.classList.toggle('open');
+  function updateElementPosition(element, event) {
+    var movementX, movementY;
+
+    if (event.type === 'touchmove') {
+      const touch = event.touches[0];
+      movementX = previousTouch ? touch.clientX - previousTouch.clientX : 0;
+      movementY = previousTouch ? touch.clientY - previousTouch.clientY : 0;
+      previousTouch = touch;
+    } else {
+      movementX = event.movementX;
+      movementY = event.movementY;
+    }
+
+    const elementY = parseInt(element.style.top || 0) + movementY;
+    const elementX = parseInt(element.style.left || 0) + movementX;
+
+    element.style.top = elementY + "px";
+    element.style.left = elementX + "px";
+  }
+
+  function startDrag(element, event) {
+    const updateFunction = (event) => updateElementPosition(element, event);
+    const stopFunction = () => stopDrag({ update: updateFunction, stop: stopFunction });
+    document.addEventListener("mousemove", updateFunction);
+    document.addEventListener("touchmove", updateFunction);
+    document.addEventListener("mouseup", stopFunction);
+    document.addEventListener("touchend", stopFunction);
+  }
+
+  function stopDrag(functions) {
+    previousTouch = undefined;
+    document.removeEventListener("mousemove", functions.update);
+    document.removeEventListener("touchmove", functions.update);
+    document.removeEventListener("mouseup", functions.stop);
+    document.removeEventListener("touchend", functions.stop);
+  }
+
+  pictures.forEach(picture => {
+    const range = 100;
+    const randomX = Math.random() * (range * 2) - range;
+    const randomY = Math.random() * (range * 2) - range;
+    const randomRotate = Math.random() * (range / 2) - range / 4;
+    const startFunction = (event) => startDrag(picture, event);
+    picture.style.top = `${randomY}px`;
+    picture.style.left = `${randomX}px`;
+    picture.style.transform = `translate(-50%, -50%) rotate(${randomRotate}deg)`;
+    picture.addEventListener("mousedown", startFunction);
+    picture.addEventListener("touchstart", startFunction);
   });
-
-
-
 
 
 
