@@ -1,0 +1,265 @@
+/* subpage */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.vertical-centered-box {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.vertical-centered-box:after {
+    content: '';
+    display: inline-block;
+    height: 100vh;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.vertical-centered-box .content {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 0;
+}
+
+
+
+.loader-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    margin-left: -60px;
+    margin-top: -60px;
+}
+
+.loader-line-mask {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 120px;
+    margin-left: -60px;
+    margin-top: -60px;
+    overflow: hidden;
+    transform-origin: 60px 60px;
+    -webkit-mask-image: -webkit-linear-gradient(top, #000000, rgba(0, 0, 0, 0));
+    animation: rotate 1.2s infinite linear;
+}
+
+.loader-line-mask .loader-line {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+#particles-background,
+#particles-foreground {
+    left: -51%;
+    top: -51%;
+    width: 202%;
+    height: 202%;
+    transform: scale3d(0.5, 0.5, 1);
+}
+
+#particles-background {
+    background: #2c2d44;
+    background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+#section8 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1691874678829-76e4e7fb5e93?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: 0%;
+}
+
+.container08 {
+    background-color: #ffffff3d;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    padding: 0px 80px 50px 80px;
+}
+
+
+.titleWrap {
+    width: 100%;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+#section8 .container {
+    display: flex;
+}
+
+.titleWrap h2 {
+    font-family: 'Headlines';
+    font-size: 6.5vw;
+    font-weight: 900;
+    z-index: 200;
+    letter-spacing: 0.3vw;
+
+}
+
+.hidden-p {
+    font-size: 2vw;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    font-family: "SebangGothic";
+    letter-spacing: 0.3vw;
+
+}
+
+.dir {
+    width: 100%;
+    display: flex;
+}
+
+.dir_left {
+    width: 40%;
+    height: 100%;
+}
+
+.dir_left img {
+    margin-top: 20px;
+    display: flex;
+}
+
+.dir_right {
+    color: #ffffff;
+    font-family: "VitroPride";
+    padding: 20px 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dir_right .dir_top {
+    width: 100%;
+    height: 80%;
+}
+
+.dir_right h3 {
+    padding: 20px 0px;
+}
+
+.dir_right p {
+    padding: 5px 0px;
+    font-size: 0.9vw;
+    height: 100%;
+    transition: all 1s;
+}
+
+.dir_right p:hover {
+    transition: all 3s;
+    transform: scaleX(2px);
+}
+
+.dir_bottom {
+    width: 100%;
+    height: 20%;
+}
+
+.dir_right .stack {
+    display: flex;
+    font-size: 0.9vw;
+}
+
+.dir_right .stack .stack01,
+.dir_right .stack .stack02,
+.dir_right .stack .stack03 {
+    border: 1px solid #fff;
+    padding: 5px 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.dir_right .stack .stack01:hover,
+.dir_right .stack .stack02:hover,
+.dir_right .stack .stack03:hover {
+    background-color: #ffffff6b;
+}
+
+.dir_right .Site {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    font-size: 0.9vw;
+}
+
+.Site .site_left {
+    width: 75%;
+}
+
+.Site .site_right {
+    padding-left: 50px;
+    width: 35%;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.Site .site_right:hover {
+    transform: scaleX(1.1);
+}

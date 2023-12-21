@@ -98,7 +98,7 @@
     src: url('../../assets/font/RightGrotesk-Medium.otf') format('truetype');
     src: url('../../assets/font/RightGrotesk-NarrowLight.otf') format('truetype');
     src: url('../../assets/font/RightGrotesk-SpatialBlack.otf') format('truetype');
-    src: url('../../assets/font/RightGrotesk-TallFine.otf') format('truetype');
+    src: url('../../assets/font/RightGrotesk-WideMedium.otf') format('truetype');
     src: url('../../assets/font/RightGrotesk-WideMedium.otf') format('truetype');
 }
 
@@ -114,6 +114,24 @@
     font-family: 'heart';
     src: url('../font/Heart\ Warming\ Extra\ Font\ by\ Situjuh\ \(7NTypes\).otf') format('truetype');
     src: url('../font/Heart\ Warming\ Font\ by\ Situjuh\ \(7NTypes\).otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HeadingNowTrial';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../font/HeadingNowTrial-58Heavy.ttf')format('truetype'),
+        url('../font/PPSupplyMono-Regular.woff2') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Headlines';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../font/Headlines-Bold.otf')format('truetype'),
+        url('../font/Headlines-Bold.otf') format('truetype');
+    font-display: swap;
 }
 
 
