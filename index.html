@@ -38,7 +38,14 @@
     <!-- //header -->
 
     <div class="border">
+
+    <h2>crrent weather</h2>
+    <h3 class="ctemp">현재온도: </h3>
+    <h3 class="lowtemp">최저온도: </h3>
+    <h3 class="hightemp">최고온도: </h3>
+    
     </div>
+
 
 
     <div id="section1">
@@ -441,7 +448,10 @@
   </div>
 </body>
 <!-- GSAP CDN 추가 -->
-
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
 <script src="https://unpkg.com/split-type"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -795,6 +805,18 @@
 
   gsap.to(".highlight-text", { opacity: 1, duration: 2.5, delay: 15 });
   gsap.to("p", { opacity: 1, duration: 2.5, delay: 10 });
+
+
+// 날씨 api
+
+$.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=652fdcd06848fb153a7c4d83d2500d7e&units=metric', function(result){
+
+  $('.ctemp').append(result.main.temp);
+  $('.lowtemp').append(result.main.temp_min);
+  $('.hightemp').append(result.main.temp_max);
+});
+
+
 </script>
 
 </html>

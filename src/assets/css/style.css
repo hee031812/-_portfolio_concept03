@@ -99,6 +99,16 @@ body {
     background-color: transparent;
     backdrop-filter: blur(10px);
 }
+.border h2 {
+    text-align: center;
+    font-family: 'PPSupplyMono';
+}
+.border h3 {
+    text-align: center;
+    padding-top: 5px;
+    font-family: 'VitroPride';
+    font-size: 0.8vw;
+}
 
 #section1 {
     padding: 7% 5%;
