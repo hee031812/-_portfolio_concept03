@@ -5,7 +5,6 @@
 
 #wrap {
     width: 100%;
-    background-color: #F4F0E6;
 }
 
 body {
@@ -327,6 +326,7 @@ body {
 
 #section3 {
     height: 100vh;
+    margin-bottom: 40vw;
 }
 
 #section3 h4 {
@@ -491,7 +491,7 @@ body {
     width: 50%;
 }
 
-.skill__desc span {
+.skill__desc .num {
     font-family: 'iceJaram-Rg';
     font-size: 1vw;
     line-height: 1;
@@ -501,27 +501,45 @@ body {
 
 .skill__desc h3 {
     font-size: 3vw;
-    text-underline-position: under;
     color: var(--white500);
     font-family: 'iceJaram-Rg';
-    transition: text-decoration 3s;
-    /* 텍스트에 대한 전환 효과를 설정합니다. */
-    text-decoration: none;
-    /* 초기 상태에서는 밑줄이 없도록 설정합니다. */
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Ensures the pseudo-element doesn't extend outside */
+    text-decoration: none; /* Remove default text decoration */
+    text-underline-position: under;
 }
 
-.skill__desc h3:hover {
-    text-decoration: underline;
-    /* 마우스 오버 시 밑줄이 생기도록 설정합니다. */
-}
+
 
 .skill__desc p {
     font-size: 0.9vw;
     color: var(--white500);
     margin-bottom: 5vh;
     font-family: 'IropkeBatang';
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Ensures the pseudo-element doesn't extend outside */
+display: inline-block;
+}
+
+/* Pseudo-element for underline */
+.skill__desc p::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 1px; /* or the thickness of your underline */
+    background-color: currentColor; /* matches the color of the text */
+    transition: left 0.3s ease, right 0.3s ease; /* Adjust timing as needed */
 
 }
+
+/* Hover effect */
+.skill__desc p:hover::after {
+    left: 0;
+    right: 0;
+}
+
 
 
 @media(max-width: 800px) {
@@ -579,7 +597,7 @@ body {
 }
 
 .container06 .sec06_right {
-    /* padding-left: 10vw; */
+    padding-left: 10vw;
     width: 50%;
 }
 
