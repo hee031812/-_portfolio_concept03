@@ -444,6 +444,131 @@ body {
 }
 
 
+/* SECTION04 */
+
+#section4 {
+    width: 100%;
+    height: 430vh;
+}
+
+.subPort {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--mainBg-color);
+}
+
+.subPort__title {
+    position: sticky;
+    top: 70px;
+    left: 0;
+    width: 48%;
+    height: 5vw;
+    font-size: 8vw;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #F14620;
+    font-family: "Headlines";
+    text-align: center;
+}
+
+.subPort__desc {
+    width: 50%;
+}
+
+
+.subPort__desc h3 {
+    font-size: 3vw;
+    color: #F14620;
+    font-family: 'iceJaram-Rg';
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Ensures the pseudo-element doesn't extend outside */
+    text-decoration: none; /* Remove default text decoration */
+    text-underline-position: under;
+}
+.subPort__desc span {
+    font-size: 2vw;
+}
+
+
+
+.subPort__desc .subBox {
+    background-color: #ffffff;
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 5vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.subPort__desc .subBox img {
+    border: 1px solid #b0b0b0;
+    margin-top: 20px;
+    width: 96%;
+    height: 500px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.subPort__desc p {
+    font-family: 'EliceDigitalBaeum';
+}
+
+/* Pseudo-element for underline */
+.subPort__desc p::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 1px; /* or the thickness of your underline */
+    background-color: currentColor; /* matches the color of the text */
+    transition: left 0.3s ease, right 0.3s ease; /* Adjust timing as needed */
+
+}
+
+/* Hover effect */
+.subPort__desc p:hover::after {
+    left: 0;
+    right: 0;
+}
+
+.dimmed {
+    opacity: 0.5;
+    transition: opacity 2s ease;
+}
+
+.active {
+        transition: opacity 2s ease;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* section05 */
@@ -609,7 +734,7 @@ display: inline-block;
 }
 .sec06_right .top {
     height: 35%;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #616161;
 }
 .sec06_right .bottom {
     height: 65%;
@@ -624,16 +749,15 @@ display: inline-block;
 }
 
 .topWrap h6 {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     margin-bottom: 10px;
-    width: 32%;
     border-radius: 2px;
-    background-color: #5a5a5a5d;
+    /* background-color: #5a5a5a5d; */
     text-align: center;
     display: flex;
     padding: 1px;
     padding-top: 5px;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .topWrap p {
@@ -734,19 +858,16 @@ input::placeholder {
 
 .commentList {
     margin-top: 2vw;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #616161;
 }
 .commentList h5 {
     margin-top: 2vw;
-    font-size: 1.2vw;
-    width: 32%;
+    font-size: 1.5vw;
     border-radius: 2px;
-    background-color: #5a5a5a5d;
     text-align: center;
     display: flex;
     padding: 1px;
     padding-top: 5px;
-    justify-content: center;
     font-family: 'PPSupplyMono';
     color: #fff;
 }
@@ -766,14 +887,6 @@ input::placeholder {
     align-items: center;
 }
 
-
-.sec06_line {
-    width: 60%;
-    height: 2px;
-    margin-top: 20px;
-    border-bottom: 1px solid #F4F0E6;
-}
-
 .commentWrap {
     display: flex;
     flex-direction: column;
@@ -783,19 +896,16 @@ input::placeholder {
 }
 
 .commentWrap h5 {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     margin-bottom: 10px;
-    /* color: #F4F0E6; */
-    /* border: 0.5px solid #f4f0e63a; */
-    width: 32%;
     border-radius: 2px;
-    background-color: #5a5a5a5d;
+    /* background-color: #5a5a5a5d; */
     text-align: center;
     display: flex;
     padding: 1px;
     padding-top: 5px;
     margin-top: 1vw;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .commentWrap p {
@@ -886,11 +996,11 @@ input::placeholder {
     -o-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     /*animation-delay*/
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    -ms-animation-delay: 1s;
-    -o-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -ms-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 
 @keyframes move {

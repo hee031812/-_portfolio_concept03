@@ -288,7 +288,39 @@
 
     <!-- section03 -->
 
-
+    <div id="section4">
+        <div class="subPort">
+          <h2 class="subPort__title">
+            do you want more<br> somthing project?
+          </h2>
+          <div class="subPort__desc">
+              <h3>01. <span>{ GSAP }</span> </h3>
+                <div class="subBox">
+                  <img src="./src/assets/img/gsap.png" alt="">
+                  <p>gsap효과를 사용하여 제작한 사이트입니다.<br>
+                  다양한 효과와 생동감 넘치는 장면을 볼수있습니다.<br></p>
+                  </div>
+              <h3> 02. <span>{ Mouse }</span></h3>
+                <div class="subBox">
+                  <img src="./src/assets/img/mouse.png" alt="">
+                  <p>gsap효과를 사용하여 제작한 사이트입니다.</p>
+                  </div>
+              <h3>03. <span>{ H.point }</span></h3>
+                <div class="subBox">
+                  <img src="./src/assets/img/hpoint.png" alt="">
+                  <p>gsap효과를 사용하여 제작한 사이트입니다.</p>
+                  </div>
+              <h3>04. <span>{ W.standard }</span></h3>
+                <div class="subBox">
+                  <img src="./src/assets/img/standard.png" alt="">
+                  <p>gsap효과를 사용하여 제작한 사이트입니다.</p>
+                  </div>
+          </div>
+          
+           
+          </div>
+        </div>
+    </div>
 
     <!-- section04 -->
     <div id="section05">
@@ -398,11 +430,10 @@
         <p>SAY HI !</p>
         <b>
           <div class="innerIam">
-            leggera<br />
-            a theme in progress<br />
-            built on bootstrap<br />
-            how I learn stuff<br />
-            how we do it
+            Nice to meet you!<br />
+            Did you enjoy it?<br />
+            If you would like to work with me<br />
+            please get in touch.<br />
           </div>
         </b>
       </div>
@@ -816,7 +847,7 @@
 
 
   gsap.to(".highlight-text", { opacity: 1, duration: 2.5, delay: 15 });
-  gsap.to("p", { opacity: 1, duration: 2.5, delay: 10 });
+  gsap.to("p", { opacity: 1, duration: 2.5, delay: 15 });
 
 
 // 날씨 api
@@ -827,6 +858,37 @@ $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=652fdcd
   $('.lowtemp').append(result.main.temp_min);
   $('.hightemp').append(result.main.temp_max);
 });
+
+
+
+
+
+
+gsap.utils.toArray(".subBox img").forEach(section => {
+    ScrollTrigger.create({
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => setDimmed(section),
+        onLeaveBack: () => setActiveSection(section),
+        onLeave: () => setActiveSection(section),
+        onEnterBack: () => setDimmed(section)
+    });
+});
+
+function setActiveSection(section) {
+    gsap.to(section, { className: "+=active" });
+    gsap.to(section, { className: "-=dimmed" });
+}
+
+function setDimmed(section) {
+    gsap.to(section, { className: "+=dimmed" });
+    gsap.to(section, { className: "-=active" });
+}
+
+
+
+
 
 
 </script>
