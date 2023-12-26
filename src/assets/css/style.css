@@ -10,6 +10,10 @@
 body {
     background: #F2EEE4;
     color: #F14620;
+     -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* header */
@@ -595,24 +599,23 @@ display: inline-block;
 }
 
 .container06 .sec06_left {
-    width: 50%;
-}
-
-.container06 .sec06_left h5 {
-    padding-top: 25vw;
-    font-size: 14vw;
-    font-weight: 900;
-    font-family: 'Headlines';
-    color: #F4F0E6;
+    width: 40%;
 }
 
 .container06 .sec06_right {
-    padding-left: 10vw;
-    width: 50%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
-
-.contactWrap {
-    padding-top: 17vw;
+.sec06_right .top {
+    height: 35%;
+    border-bottom: 1px solid #fff;
+}
+.sec06_right .bottom {
+    height: 65%;
+}
+.topWrap {
+    padding-top: 7vw;
     display: flex;
     flex-direction: column;
     color: #F4F0E6;
@@ -620,7 +623,7 @@ display: inline-block;
     font-family: 'PPSupplyMono';
 }
 
-.contactWrap h6 {
+.topWrap h6 {
     font-size: 1.2vw;
     margin-bottom: 10px;
     width: 32%;
@@ -633,52 +636,12 @@ display: inline-block;
     justify-content: center;
 }
 
-.contactWrap p {
+.topWrap p {
+    padding-top: 1vw;
     font-size: 1vw;
     padding-bottom: 10px;
     font-weight: 100;
-}
-
-.linkWrap {
-    display: flex;
-    align-content: center;
-    align-items: center;
-}
-
-
-.sec06_line {
-    width: 60%;
-    height: 2px;
-    margin-top: 20px;
-    border-bottom: 1px solid #F4F0E6;
-}
-
-.commentWrap {
-    display: flex;
-    flex-direction: column;
-    font-family: 'PPSupplyMono';
-    color: #F4F0E6;
-    padding-top: 20px;
-}
-
-.commentWrap h5 {
-    font-size: 1.2vw;
-    margin-bottom: 10px;
-    /* color: #F4F0E6; */
-    /* border: 0.5px solid #f4f0e63a; */
-    width: 32%;
-    border-radius: 2px;
-    background-color: #5a5a5a5d;
-    text-align: center;
-    display: flex;
-    padding: 1px;
-    padding-top: 5px;
-    justify-content: center;
-}
-
-.commentWrap p {
-    font-size: 0.9vw;
-    font-weight: 100;
+    padding-bottom: 1vw;
 }
 
 .iconWrap {
@@ -720,15 +683,15 @@ display: inline-block;
     display: flex;
 }
 
+
 .commentWrap fieldset {
-    padding-top: 8px;
     font-weight: 100;
     display: flex;
     flex-direction: column;
 }
 
 .commentWrap .name input {
-    width: 42%;
+    width: 80%;
     height: 50px;
     background-color: #a0a0a01f;
     color: #F4F0E6;
@@ -736,7 +699,7 @@ display: inline-block;
 }
 
 .commentWrap .write input {
-    width: 42%;
+    width: 80%;
     height: 100px;
     background-color: #a0a0a01f;
     color: #F4F0E6;
@@ -752,21 +715,97 @@ input::placeholder {
 
 
 .commentWrap button {
-    width: 41%;
+    width: 80%;
     border-radius: 5px;
-    height: 30px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     margin-top: 20px;
     cursor: pointer;
+    font-size: 1vw;
 }
 
 .commentWrap button:hover {
     background-color: rgba(228, 226, 226, 0.842);
     color: #F4F0E6;
 }
+
+.commentList {
+    margin-top: 2vw;
+    border-top: 1px solid #fff;
+}
+.commentList h5 {
+    margin-top: 2vw;
+    font-size: 1.2vw;
+    width: 32%;
+    border-radius: 2px;
+    background-color: #5a5a5a5d;
+    text-align: center;
+    display: flex;
+    padding: 1px;
+    padding-top: 5px;
+    justify-content: center;
+    font-family: 'PPSupplyMono';
+    color: #fff;
+}
+.listBox {
+    height: 150px;
+    overflow: scroll;
+    font-family: 'PPSupplyMono';
+    padding-top: 1.5vw;
+    font-size: 1vw;
+    color: #fff;
+}
+
+
+.linkWrap {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+
+.sec06_line {
+    width: 60%;
+    height: 2px;
+    margin-top: 20px;
+    border-bottom: 1px solid #F4F0E6;
+}
+
+.commentWrap {
+    display: flex;
+    flex-direction: column;
+    font-family: 'PPSupplyMono';
+    color: #F4F0E6;
+    padding-top: 20px;
+}
+
+.commentWrap h5 {
+    font-size: 1.2vw;
+    margin-bottom: 10px;
+    /* color: #F4F0E6; */
+    /* border: 0.5px solid #f4f0e63a; */
+    width: 32%;
+    border-radius: 2px;
+    background-color: #5a5a5a5d;
+    text-align: center;
+    display: flex;
+    padding: 1px;
+    padding-top: 5px;
+    margin-top: 1vw;
+    justify-content: center;
+}
+
+.commentWrap p {
+    padding-top: 1vw;
+    font-size: 0.9vw;
+    font-weight: 100;
+    padding-bottom: 1vw;
+}
+
+
 
 
 .infoWrap {

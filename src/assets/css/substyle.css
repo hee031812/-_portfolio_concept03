@@ -73,10 +73,15 @@ body {}
 }
 
 #particles-background {
-    background: #2c2d44;
+    background: #6d2707e3;
+    background-image: -moz-linear-gradient(45deg, #3f3251 2%, #001316 100%);
+    background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #01171a 100%);
+    background-image: linear-gradient(45deg, #ff510000 2%, #000000 100%);
+
+        /* background: #2c2d44;
     background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
     background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
-    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%); */
 }
 
 @keyframes rotate {
