@@ -41,7 +41,7 @@
 
       <h2>crrent weather</h2>
       <h3 class="ctemp">현재온도: </h3>
-      <h3 class="lowtemp">최저온도: </h3>
+      <!-- <h3 class="lowtemp">최저온도: </h3> -->
       <h3 class="hightemp">최고온도: </h3>
 
     </div>
@@ -50,11 +50,10 @@
 
     <div id="section1">
       <div class="desc split">
-        Hello, I'm Kim Heejin.<br>
-        I have a dream of Front and <br>I'm working hard to make it a
-        reality.<br>
+        Hello, I'm Kim Heejin.<br />
+        I have a dream of Front and <br>I'm working hard to make it a reality.<br>
         If you want to see the outcome of the effort,
-        please scroll down.hope you have a good Time
+        please scroll down. Hope you have a good Time·͜·
       </div>
       <div class="text">
         <div>24</div>
@@ -287,14 +286,14 @@
     </div>
 
     <!-- section03 -->
-    
+
     <div id="section4">
       <div class="desc split">
-        We are a design agency based in Copenhagen.<br /> With a strong belief in strategically founded<br /> and highly
-        crafted
-        digital experiences
+        "I've worked hard for the past six months. <br>
+        If you want to see more of the results,<br>
+        please scroll down."
       </div>
-      <div class="text">
+      <div class="sec04_text">
         <div>LIST</div>
         <div>MORE</div>
       </div>
@@ -378,7 +377,6 @@
             <strong>
               "GSAP 사이트"는 GreenSock Animation Platform(GSAP)을 기반으로 한 동적이고 상호작용이 풍부한 웹사이트입니다. </strong>
           </li>
-
         </ul>
       </div>
     </div>
@@ -878,7 +876,7 @@
   }
 
   pictures.forEach(picture => {
-    const range = 100;
+    const range = 150;
     const randomX = Math.random() * (range * 2) - range;
     const randomY = Math.random() * (range * 2) - range;
     const randomRotate = Math.random() * (range / 2) - range / 4;
@@ -940,23 +938,104 @@
 
 
 
-  // sub img 마우스 오버 이미지
+  const list = document.querySelector('.list ul');
+  const hoverImage = document.querySelector('.hover-image');
+
+  list.addEventListener('mouseover', () => {
+    hoverImage.style.display = 'block';
+  });
+
+  list.addEventListener('mouseout', () => {
+    hoverImage.style.display = 'none';
+  });
 
   document.querySelectorAll('.list li').forEach(li => {
-    const hoverImage = li.querySelector('.hover-image');
-
     li.addEventListener('mouseover', () => {
-      hoverImage.style.display = 'block';
+      const imageSrc = li.querySelector('img').src;
+      hoverImage.src = imageSrc;
     });
 
     li.addEventListener('mousemove', (e) => {
       hoverImage.style.left = e.clientX + 'px';
       hoverImage.style.top = e.clientY + 'px';
     });
+  });
 
-    li.addEventListener('mouseout', () => {
-      hoverImage.style.display = 'none';
+
+
+  // 메인 페이지 인트로 글자
+  function wrapCharacters(selector) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(element => {
+      let text = element.innerText;
+
+      text = text.replace(/\n/g, '[[BR]]');
+      const characters = text.split('');
+      element.innerHTML = characters.map(char => {
+        if (char === ' ') {
+          return '<span class="char">&nbsp;</span>';
+        } else if (char === '[[BR]]') {
+          return '<br>';
+        }
+        return `<span class="char">${char}</span>`;
+      }).join('');
     });
+  }
+
+  gsap.set(".char", { opacity: 0 });
+
+  gsap.to(".char", {
+    opacity: 1,
+    duration: 0.5,
+    stagger: 0.05,
+    ease: "power2.inOut"
+  });
+
+
+  // 24turn 효과
+  gsap.to(".text > div", {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".text",
+      start: "top center",
+      end: "bottom top",
+      toggleActions: "play none none reset"
+    }
+  });
+
+  // list more
+  gsap.to(".sec04_text > div", {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".sec04_text", // 이 부분을 .text에서 .sec04_text로 변경
+      start: "top 70%",
+      end: "bottom top",
+      toggleActions: "play none none reset"
+    }
+  });
+
+
+
+
+  // 사진 dueation 효과 
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".Picture", {
+    scale: 1,
+    opacity: 1,
+    stagger: 0.5, // 각 요소 사이의 시간 간격
+    scrollTrigger: {
+      trigger: ".Picture",
+      start: "top bottom", // 트리거 요소가 뷰포트 하단에 도달했을 때 애니메이션 시작
+      end: "bottom top", // 트리거 요소가 뷰포트 상단에 도달했을 때 애니메이션 종료
+      toggleActions: "play none none reset" // 스크롤 조건에 따른 액션 설정
+    }
   });
 
 

@@ -17,6 +17,8 @@ body {
     display: none;
 }
 
+
+
 /* header */
 
 #header {
@@ -119,19 +121,19 @@ body {
 
 /* SECTION1 */
 #section1 {
-    padding: 7% 5%;
+    padding: 8% 5%;
 }
 
 #section1 .desc {
     font-size: 3.8vw;
-    line-height: 1.2;
+    line-height: 1.3;
     font-family: 'PPSupplyMono';
     font-weight: 100;
     letter-spacing: -0.2vw;
 }
 
 #section1 .text {
-    margin-top: 10%;
+    margin-top: 13%;
     font-size: 22vw;
     line-height: 0.9;
     font-family: Poppins;
@@ -160,22 +162,38 @@ body {
     background-size: cover;
 }
 
+.desc {
+    white-space: pre-wrap;
+    /* 띄어쓰기와 줄바꿈 유지 */
+}
+
+.char {
+    opacity: 0;
+    display: inline-block;
+}
+
+
+.text>div {
+    opacity: 0;
+    transform: translateY(100px);
+
+}
+
 
 
 
 /* section02 */
 #section2 {
     padding: 10% 0;
-    height: 100vh;
+    height: 150vh;
     position: relative;
+    margin-bottom: 10vw;
 }
-
 
 .Container {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* font-family: 'PPSupplyMono'; */
     font-family: 'iceJaram-Rg';
     font-weight: 100;
 
@@ -194,7 +212,12 @@ body {
     user-select: none;
     cursor: pointer;
     z-index: 10;
+    opacity: 0;
+    transform: scale(0.8);
+    /* 이미지를 약간 축소합니다 */
+    transition: transform 0.3s, opacity 0.3s;
 }
+
 
 .Picture-img {
     display: block;
@@ -371,7 +394,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     position: relative;
-        height: 860px;
+    height: 860px;
 }
 
 .port-wrap .port::after {
@@ -415,7 +438,7 @@ body {
     width: 58%;
     height: 35%;
     filter: sepia(10%);
-    
+
 }
 
 .port-wrap .port img {
@@ -452,53 +475,62 @@ body {
     background-color: rgba(255, 255, 255, 0.301);
 }
 
-@media (max-width:1600px){
+@media (max-width:1600px) {
     .port-wrap .port {
-    height: 740px;
+        height: 740px;
+    }
+
+    #section1 .text .imgWrap {
+        width: 38vw;
+    }
 }
-#section1 .text .imgWrap {
-    width: 38vw;
-}
-}
-@media (max-width:1500px){
+
+@media (max-width:1500px) {
     .port-wrap .port {
-    height: 700px;
+        height: 700px;
+    }
+
+    #section1 .text .imgWrap {
+        width: 38vw;
+    }
 }
-#section1 .text .imgWrap {
-    width: 38vw;
-}
-}
-@media (max-width:1400px){
+
+@media (max-width:1400px) {
     .port-wrap .port {
-    height: 650px;
+        height: 650px;
+    }
+
+    #section1 .text .imgWrap {
+        width: 38vw;
+    }
+
+    .port-wrap .port .skill span {
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
 }
-#section1 .text .imgWrap {
-    width: 38vw;
-}
-.port-wrap .port .skill span {
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    line-height: 80px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-}
-@media (max-width:1300px){
+
+@media (max-width:1300px) {
     .port-wrap .port {
-    height: 600px;
-}
-.port-wrap .port .skill span {
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    line-height: 70px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-#section1 .text .imgWrap {
-    width: 38vw;
-}
+        height: 600px;
+    }
+
+    .port-wrap .port .skill span {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    #section1 .text .imgWrap {
+        width: 38vw;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -520,13 +552,13 @@ body {
 
 #section4 .desc {
     font-size: 3.8vw;
-    line-height: 1.2;
+    line-height: 1.3;
     font-family: 'PPSupplyMono';
     font-weight: 100;
     letter-spacing: -0.2vw;
 }
 
-#section4 .text {
+#section4 .sec04_text {
     margin-top: 10%;
     font-size: 26vw;
     line-height: 0.8;
@@ -535,9 +567,12 @@ body {
     text-transform: uppercase;
     position: relative;
     margin-bottom: 100px;
-
 }
 
+.sec04_text>div {
+    opacity: 0;
+    transform: translateY(20px);
+}
 
 #section4 .list li {
     border-bottom: 1px solid #F14620;
@@ -553,7 +588,9 @@ body {
     z-index: 1000;
     width: 300px;
     height: auto;
+    background-color: #fff;
 }
+
 
 
 #section4 .list li span {
